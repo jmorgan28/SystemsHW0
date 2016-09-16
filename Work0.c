@@ -23,6 +23,11 @@ int mult(){
 int smallmult(){
   int ctr = 0;
   int terminate = 0;
+  while(terminate != 0){
+    int w = 0;
+    while(w < 21){
+      if(ctr % w == 0){
+	w +
   
 
 

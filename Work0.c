@@ -3,10 +3,11 @@
 
 //Jackson Morgan Work 0
 
+// problem 1
 int mult(){
   int i = 1;
   int s = 0;
-  while(i < 100){
+  while(i < 1000){
     if( (i % 5) == 0){
       s += i;
     }
@@ -20,18 +21,23 @@ int mult(){
   return s;
 }
 
+//problem 5
+
 int smallmult(){
-  int ctr = 0;
-  int terminate = 0;
-  while(terminate != 0){
-    int w = 0;
-    while(w < 21){
-      if(ctr % w == 0){
-	w +
-  
-
-
+  int ctr = 20;
+  int numb = 1;
+  while(numb < 21){
+    if((ctr % numb) == 0){
+      numb ++;
+    }
+    else{
+      numb = 1;
+      ctr ++;}
+  }
+  return ctr;
 }
+
+
 
 
 
@@ -40,5 +46,6 @@ int smallmult(){
 
 int main(){
   printf("%d\n", mult());
+  printf("%d\n", smallmult());
 
 }

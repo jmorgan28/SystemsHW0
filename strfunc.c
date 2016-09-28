@@ -21,10 +21,16 @@ char * mystrcpy( char *dest, char *source ){
     dest ++;
     source ++;
   }
-  dest ++;
+  //dest ++;
   dest = 0;
 
 }
+
+//char * strncat( char *dest, char *source, int n){
+
+
+//}
+
 
 int main(){
   printf("length of 'that and this': %d\n", mystrlen("that and this"));

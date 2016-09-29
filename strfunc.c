@@ -50,7 +50,11 @@ int main(){
   printf("length of 'that and this': %d\n", mystrlen("that and this"));
   char s[100]= "this";
   char p[100]= "hhh";
-  strncat(p,s, 2);
+  char t[100]= "this";
+  char h[100]= "hhh";
+  strncat(h,t, 2);
+  mystrncat(p,s, 2);
+  printf("%s\n", p);
   printf("%s\n", p);
   return 0;
   

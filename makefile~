@@ -1,0 +1,2 @@
+strdo:strfunc.c
+	gcc strfunc.c -0 strdo

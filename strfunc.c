@@ -26,17 +26,31 @@ char * mystrcpy( char *dest, char *source ){
 
 }
 
-//char * strncat( char *dest, char *source, int n){
+char * mystrncat( char *dest, char *source, int n){
+  dest += mystrlen(dest);
+  while(*source && n > 0){
+    //  if(*dest == 0){
+      //*dest = 1;
+    //}
+    *dest = *source;
+    dest ++;
+    source ++;
+    n --;
+  }
+  //dest ++;
+  dest = 0;
+
+  
 
 
-//}
+}
 
 
 int main(){
   printf("length of 'that and this': %d\n", mystrlen("that and this"));
   char s[100]= "this";
   char p[100]= "hhh";
-  mystrcpy(p,s);
+  strncat(p,s, 2);
   printf("%s\n", p);
   return 0;
   

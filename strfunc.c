@@ -89,7 +89,27 @@ int mystrcmp( char *s1, char *s2 ){
   return 0;
 }
  
+
+
+char * mystrchr( char *s, char c ){
+  while(*s){
+    if(*s == c){
+      return s;
+    }
+    s ++;
+  }
+  
+  char *p;
+  return p;
  
+}
+
+
+
+
+
+
+
 
 int main(){
   printf("length of 'that and this': %d\n", mystrlen("that and this"));
@@ -105,6 +125,8 @@ int main(){
   char b[100]= "bhat";
   printf("compare real: %d\n", strcmp(b,a));
   printf("compare mine: %d\n", mystrcmp(b,a));
+  printf("if in real: %s\n", strchr(a, 'h'));
+  printf("if in: %s\n", mystrchr(a, 'h'));
   // issue when different sized
   return 0;
   

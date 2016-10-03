@@ -112,22 +112,41 @@ char * mystrchr( char *s, char c ){
 
 
 int main(){
-  printf("length of 'that and this': %d\n", mystrlen("that and this"));
-  char s[100]= "this";
-  char p[100]= "hhh";
-  char t[100]= "this";
-  char h[100]= "hhh";
-  strncat(h,t, 2);
-  mystrncat(p,s, 2);
-  printf("%s\n", p);
-  printf("%s\n", p);
-  char a[100]= "this";
-  char b[100]= "bhat";
-  printf("compare real: %d\n", strcmp(b,a));
-  printf("compare mine: %d\n", mystrcmp(b,a));
-  printf("if in real: %s\n", strchr(a, 'h'));
-  printf("if in: %s\n", mystrchr(a, 'h'));
-  // issue when different sized
+  printf("------------Testing strlen---------\n");
+  char c[50] = "about this";
+  printf("string c = about this\n");
+  printf("The length with built in strlen: %d\n", strlen(c));
+  printf("The length with built in mystrlen: %d\n", mystrlen(c));
+  printf("------------strcpy---------\n");
+  char f[50] = "pizza";
+  char g[50] = "";
+  strcpy(g,f);
+  printf("string f = pizza, string g =  \n");
+  printf("using strcpy (g,f) get: f =%s\n", f);
+  char i[50] = "pizza";
+  char j[50] = "";
+  printf("string i = pizza, string j =  \n");
+  mystrcpy(j,i);
+  printf("using mystrcpy(j,i) get: j =%s\n", j);
+  printf("------------strncat---------\n");
+  char s1[20] = "man";
+  char s2[20] = "made";
+  strncat(s1,s2,0);
+  printf("string s1 = man, s2 = made  \n");
+  printf("using strncat(s1,s2,0) get: s1 = %s\n", s1);
+  strncat(s1,s2,2);
+  printf("using strncat(s1,s2,2) get: s1 = %s\n", s1);
+  strncat(s1,s2,4);
+  printf("using strncat(s1,s2,4) get: s1 = %s\n", s1);
+  char s3[20] = "man";
+  char s4[20] = "made";
+  mystrncat(s3,s4,0);
+  printf("string s1 = man, s2 = made  \n");
+  printf("using mystrncat(s2,s3,0) get: s1 = %s\n", s3);
+  mystrncat(s3,s4,2);
+  printf("using mystrncat(s3,s3,2) get: s1 = %s\n", s3);
+  mystrncat(s3,s4,4);
+  printf("using mystrncat(s2,s3,4) get: s1 = %s\n", s3);
   return 0;
   
 }

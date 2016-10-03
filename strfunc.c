@@ -67,10 +67,10 @@ int mystrcmp( char *s1, char *s2 ){
     sum2 += *s2;
     s2 ++;
     if(sum1 > sum2){
-      return 1;
+      return sum1 -sum2;
     }
     if(sum1 < sum2){
-      return -1;
+      return sum1 - sum2;
     }
   }
   
@@ -79,11 +79,11 @@ int mystrcmp( char *s1, char *s2 ){
   }
 
   if(! (*s1)){
-      return -1;
+      return *s1 - *s2;
     }
 
   if(! (*s2)){
-      return 1;
+      return *s1 - *s2;
     }
     
   return 0;
@@ -147,6 +147,15 @@ int main(){
   printf("using mystrncat(s3,s3,2) get: s1 = %s\n", s3);
   mystrncat(s3,s4,4);
   printf("using mystrncat(s2,s3,4) get: s1 = %s\n", s3);
+  printf("------------strcmp---------\n");
+  char y[80] = "that";
+  char z[80] = "this";
+  printf("string y = this, z = that  \n");
+  printf("using strcmp(y,z) get:% d\n", strcmp(y,z));
+  char yz[80] = "that";
+  char zy[80] = "this";
+  printf("string yz = this, zy = that  \n");
+  printf("using mystrcmp(yz,zy) get:% d\n", mystrcmp(yz,zy));
   return 0;
   
 }

@@ -99,7 +99,7 @@ char * mystrchr( char *s, char c ){
     s ++;
   }
   
-  char *p;
+  char *p= 0;
   return p;
  
 }
@@ -156,6 +156,13 @@ int main(){
   char zy[80] = "this";
   printf("string yz = this, zy = that  \n");
   printf("using mystrcmp(yz,zy) get:% d\n", mystrcmp(yz,zy));
+  printf("------------strchr---------\n");
+  char l[60] = "about that";
+  printf("string l = about that \n");
+  printf("using strchr(l,'z') get: %p \n", strchr(l,'z'));
+  printf("using strchr(l,'t') get: %p \n", strchr(l,'t'));
+  printf("using mystrchr(l,'z') get: %p \n", mystrchr(l,'z'));
+  printf("using mystrchr(l,'t') get: %p \n", mystrchr(l,'t'));
   return 0;
   
 }
